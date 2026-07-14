@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – Thaicharoen Plastic</title>
-  <meta name="description" content="Get in touch with Thaicharoen Plastic for PP, PE, and HDPE plastic orders, quotes, and inquiries." />
+  <title data-i18n="contact.meta.title">Contact – Thaicharoen Plastic</title>
+  <meta name="description" data-i18n-content="contact.meta.desc" content="Get in touch with Thaicharoen Plastic for PP, PE, and HDPE plastic orders, quotes, and inquiries." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -40,13 +40,16 @@
         <span class="font-bold text-lg text-brand-900">Thaicharoen Plastic</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="font-medium text-gray-600 hover:text-brand-700 transition">Home</a>
-        <a href="products.html" class="font-medium text-gray-600 hover:text-brand-700 transition">Products</a>
-        <a href="contact.html" class="font-medium text-brand-700 border-b-2 border-brand-700 pb-0.5">Contact</a>
+        <a href="index.html" class="font-medium text-gray-600 hover:text-brand-700 transition" data-i18n="nav.home">Home</a>
+        <a href="products.html" class="font-medium text-gray-600 hover:text-brand-700 transition" data-i18n="nav.products">Products</a>
+        <a href="contact.html" class="font-medium text-brand-700 border-b-2 border-brand-700 pb-0.5" data-i18n="nav.contact">Contact</a>
       </div>
-      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-900 transition">
-        Get a Quote
-      </a>
+      <div class="hidden md:flex items-center gap-3">
+        <button onclick="toggleLanguage()" class="lang-toggle-btn text-sm font-semibold text-brand-700 border border-brand-200 rounded-lg px-3 py-2 hover:bg-brand-50 transition">ไทย</button>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-900 transition" data-i18n="nav.quote">
+          Get a Quote
+        </a>
+      </div>
       <button onclick="toggleMenu()" class="md:hidden p-2 rounded text-gray-600 hover:bg-gray-100">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -54,18 +57,19 @@
       </button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white px-6 py-4 flex flex-col gap-3">
-      <a href="index.html" class="font-medium text-gray-600">Home</a>
-      <a href="products.html" class="font-medium text-gray-600">Products</a>
-      <a href="contact.html" class="font-medium text-brand-700">Contact</a>
+      <a href="index.html" class="font-medium text-gray-600" data-i18n="nav.home">Home</a>
+      <a href="products.html" class="font-medium text-gray-600" data-i18n="nav.products">Products</a>
+      <a href="contact.html" class="font-medium text-brand-700" data-i18n="nav.contact">Contact</a>
+      <button onclick="toggleLanguage()" class="lang-toggle-btn text-left font-medium text-brand-700 border border-brand-200 rounded-lg px-3 py-2 mt-1">ไทย</button>
     </div>
   </nav>
 
   <!-- Page Header -->
   <section class="hero-gradient pt-16">
     <div class="max-w-6xl mx-auto px-6 py-20 text-center text-white">
-      <span class="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4">Get in Touch</span>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Contact Us</h1>
-      <p class="text-blue-100 text-lg max-w-xl mx-auto">
+      <span class="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4" data-i18n="contact.header.badge">Get in Touch</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4" data-i18n="contact.header.title">Contact Us</h1>
+      <p class="text-blue-100 text-lg max-w-xl mx-auto" data-i18n="contact.header.desc">
         Ready to place an order, request a sample, or simply have a question? Our team is here to help.
       </p>
     </div>
@@ -77,7 +81,7 @@
 
       <!-- Contact Details -->
       <div class="section-fade">
-        <h2 class="text-2xl font-extrabold text-brand-900 mb-8">Company Information</h2>
+        <h2 class="text-2xl font-extrabold text-brand-900 mb-8" data-i18n="contact.info.title">Company Information</h2>
 
         <div class="space-y-6">
           <!-- Phone -->
@@ -88,9 +92,9 @@
               </svg>
             </div>
             <div>
-              <div class="font-bold text-brand-900 mb-1">Phone</div>
+              <div class="font-bold text-brand-900 mb-1" data-i18n="contact.info.phone.label">Phone</div>
               <a href="tel:+66851121182" class="text-brand-700 font-semibold text-lg hover:text-brand-900 transition">085-112-1182</a>
-              <div class="text-gray-500 text-sm mt-1">Sales inquiries</div>
+              <div class="text-gray-500 text-sm mt-1" data-i18n="contact.info.phone.sub">Sales inquiries</div>
             </div>
           </div>
 
@@ -102,9 +106,9 @@
               </svg>
             </div>
             <div>
-              <div class="font-bold text-brand-900 mb-1">Email</div>
+              <div class="font-bold text-brand-900 mb-1" data-i18n="contact.info.email.label">Email</div>
               <a href="mailto:thaicharoen1999@gmail.com" class="text-amber-700 font-semibold text-lg hover:text-amber-900 transition break-all">thaicharoen1999@gmail.com</a>
-              <div class="text-gray-500 text-sm mt-1">General inquiries, orders & quotes</div>
+              <div class="text-gray-500 text-sm mt-1" data-i18n="contact.info.email.sub">General inquiries, orders & quotes</div>
             </div>
           </div>
 
@@ -117,7 +121,7 @@
               </svg>
             </div>
             <div>
-              <div class="font-bold text-brand-900 mb-1">Address</div>
+              <div class="font-bold text-brand-900 mb-1" data-i18n="contact.info.address.label">Address</div>
               <div class="text-gray-700 leading-relaxed">
                 Thaicharoen Plastic Co., Ltd.<br/>
                 88/58 Moo 9, Na Di<br/>
@@ -130,19 +134,19 @@
 
         <!-- Business hours -->
         <div class="mt-8 p-6 bg-brand-900 rounded-2xl text-white">
-          <div class="font-bold text-amber-400 mb-4">Business Hours</div>
+          <div class="font-bold text-amber-400 mb-4" data-i18n="contact.info.hours.title">Business Hours</div>
           <div class="space-y-2 text-sm">
             <div class="flex justify-between">
-              <span class="text-blue-200">Monday – Friday</span>
-              <span class="font-semibold">8:00 AM – 5:30 PM</span>
+              <span class="text-blue-200" data-i18n="contact.info.hours.weekdays">Monday – Friday</span>
+              <span class="font-semibold" data-i18n="contact.info.hours.weekdaysTime">8:00 AM – 5:30 PM</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-blue-200">Saturday</span>
-              <span class="font-semibold">8:00 AM – 12:00 PM</span>
+              <span class="text-blue-200" data-i18n="contact.info.hours.sat">Saturday</span>
+              <span class="font-semibold" data-i18n="contact.info.hours.satTime">8:00 AM – 12:00 PM</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-blue-200">Sunday & Public Holidays</span>
-              <span class="text-blue-300">Closed</span>
+              <span class="text-blue-200" data-i18n="contact.info.hours.sun">Sunday & Public Holidays</span>
+              <span class="text-blue-300" data-i18n="contact.info.hours.sunTime">Closed</span>
             </div>
           </div>
         </div>
@@ -151,66 +155,66 @@
       <!-- Inquiry Form -->
       <div class="section-fade">
         <div class="bg-gray-50 rounded-3xl p-8 border border-gray-200">
-          <h2 class="text-2xl font-extrabold text-brand-900 mb-2">Send an Inquiry</h2>
-          <p class="text-gray-500 text-sm mb-8">Fill in the form and our sales team will get back to you within 1 business day.</p>
+          <h2 class="text-2xl font-extrabold text-brand-900 mb-2" data-i18n="contact.form.title">Send an Inquiry</h2>
+          <p class="text-gray-500 text-sm mb-8" data-i18n="contact.form.desc">Fill in the form and our sales team will get back to you within 1 business day.</p>
 
           <form id="inquiry-form" class="space-y-5" onsubmit="handleSubmit(event)">
             <div class="grid grid-cols-2 gap-4">
               <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1.5">First Name <span class="text-red-500">*</span></label>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5"><span data-i18n="contact.form.firstName">First Name</span> <span class="text-red-500">*</span></label>
                 <input type="text" required placeholder="Somchai" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm" />
               </div>
               <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1.5">Last Name <span class="text-red-500">*</span></label>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5"><span data-i18n="contact.form.lastName">Last Name</span> <span class="text-red-500">*</span></label>
                 <input type="text" required placeholder="Jaidee" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm" />
               </div>
             </div>
 
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Company Name</label>
-              <input type="text" placeholder="Your Company Co., Ltd." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm" />
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" data-i18n="contact.form.companyName">Company Name</label>
+              <input type="text" data-i18n-placeholder="contact.form.companyPlaceholder" placeholder="Your Company Co., Ltd." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm" />
             </div>
 
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Email Address <span class="text-red-500">*</span></label>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5"><span data-i18n="contact.form.email">Email Address</span> <span class="text-red-500">*</span></label>
               <input type="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm" />
             </div>
 
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Phone Number</label>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" data-i18n="contact.form.phone">Phone Number</label>
               <input type="tel" placeholder="08X-XXX-XXXX" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm" />
             </div>
 
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Product of Interest <span class="text-red-500">*</span></label>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5"><span data-i18n="contact.form.product">Product of Interest</span> <span class="text-red-500">*</span></label>
               <select required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm bg-white">
-                <option value="" disabled selected>Select a product...</option>
-                <option>PP – Polypropylene (Homopolymer)</option>
-                <option>PP – Polypropylene (Copolymer)</option>
-                <option>PE – Polyethylene (LLDPE)</option>
-                <option>HDPE – High-Density Polyethylene</option>
-                <option>Multiple Products / Not Sure</option>
+                <option value="" disabled selected data-i18n="contact.form.selectProduct">Select a product...</option>
+                <option data-i18n="contact.form.opt.ppHomo">PP – Polypropylene (Homopolymer)</option>
+                <option data-i18n="contact.form.opt.ppCo">PP – Polypropylene (Copolymer)</option>
+                <option data-i18n="contact.form.opt.pe">PE – Polyethylene (LLDPE)</option>
+                <option data-i18n="contact.form.opt.hdpe">HDPE – High-Density Polyethylene</option>
+                <option data-i18n="contact.form.opt.multi">Multiple Products / Not Sure</option>
               </select>
             </div>
 
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Estimated Quantity (kg/month)</label>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" data-i18n="contact.form.quantity">Estimated Quantity (kg/month)</label>
               <select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm bg-white">
-                <option value="" disabled selected>Select quantity range...</option>
-                <option>Under 500 kg</option>
-                <option>500 – 2,000 kg</option>
-                <option>2,000 – 10,000 kg</option>
-                <option>10,000 – 50,000 kg</option>
-                <option>50,000+ kg</option>
+                <option value="" disabled selected data-i18n="contact.form.selectQuantity">Select quantity range...</option>
+                <option data-i18n="contact.form.qty1">Under 500 kg</option>
+                <option data-i18n="contact.form.qty2">500 – 2,000 kg</option>
+                <option data-i18n="contact.form.qty3">2,000 – 10,000 kg</option>
+                <option data-i18n="contact.form.qty4">10,000 – 50,000 kg</option>
+                <option data-i18n="contact.form.qty5">50,000+ kg</option>
               </select>
             </div>
 
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Message / Specifications</label>
-              <textarea rows="4" placeholder="Please describe your requirements, application, or any special grade specifications..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm resize-none"></textarea>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5" data-i18n="contact.form.message">Message / Specifications</label>
+              <textarea rows="4" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Please describe your requirements, application, or any special grade specifications..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-sm resize-none"></textarea>
             </div>
 
-            <button type="submit" class="w-full bg-brand-700 hover:bg-brand-900 text-white font-bold py-4 rounded-xl transition text-base shadow-sm">
+            <button type="submit" class="w-full bg-brand-700 hover:bg-brand-900 text-white font-bold py-4 rounded-xl transition text-base shadow-sm" data-i18n="contact.form.submit">
               Send Inquiry
             </button>
           </form>
@@ -221,9 +225,9 @@
               <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
-              Thank you — inquiry received!
+              <span data-i18n="contact.form.successTitle">Thank you — inquiry received!</span>
             </div>
-            <p class="text-sm text-green-700">Our sales team will contact you within 1 business day. In the meantime, feel free to reach us directly by phone or email.</p>
+            <p class="text-sm text-green-700" data-i18n="contact.form.successDesc">Our sales team will contact you within 1 business day. In the meantime, feel free to reach us directly by phone or email.</p>
           </div>
         </div>
       </div>
@@ -234,8 +238,8 @@
   <section class="bg-gray-100">
     <div class="max-w-6xl mx-auto px-6 py-16">
       <div class="section-fade text-center mb-10">
-        <span class="text-brand-700 font-semibold text-sm uppercase tracking-widest">Find Us</span>
-        <h2 class="text-3xl font-extrabold text-brand-900 mt-3">Our Location</h2>
+        <span class="text-brand-700 font-semibold text-sm uppercase tracking-widest" data-i18n="contact.map.label">Find Us</span>
+        <h2 class="text-3xl font-extrabold text-brand-900 mt-3" data-i18n="contact.map.title">Our Location</h2>
       </div>
       <div class="section-fade bg-gradient-to-br from-brand-100 to-blue-200 rounded-3xl overflow-hidden h-72 flex items-center justify-center border border-brand-200 shadow-inner">
         <div class="text-center text-brand-700">
@@ -244,13 +248,13 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
           <div class="font-bold text-xl text-brand-900">Thaicharoen Plastic</div>
-          <div class="text-brand-700 mt-1">Mueang Samut Sakhon, Samut Sakhon</div>
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 bg-brand-700 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-900 transition">
+          <div class="text-brand-700 mt-1" data-i18n="contact.map.city">Mueang Samut Sakhon, Samut Sakhon</div>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 bg-brand-700 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-900 transition" data-i18n="contact.map.openMaps">
             Open in Google Maps
           </a>
         </div>
       </div>
-      <p class="text-center text-gray-500 text-sm mt-4">Replace this placeholder with a Google Maps embed once you have your exact address.</p>
+      <p class="text-center text-gray-500 text-sm mt-4" data-i18n="contact.map.note">Replace this placeholder with a Google Maps embed once you have your exact address.</p>
     </div>
   </section>
 
@@ -264,18 +268,18 @@
           </div>
           <span class="font-bold text-lg">Thaicharoen Plastic</span>
         </div>
-        <p class="text-blue-200 text-sm leading-relaxed">Quality plastic supplier serving industries across Thailand.</p>
+        <p class="text-blue-200 text-sm leading-relaxed" data-i18n="footer.tagline">Quality plastic supplier serving industries across Thailand.</p>
       </div>
       <div>
-        <div class="font-semibold mb-3 text-amber-400">Quick Links</div>
+        <div class="font-semibold mb-3 text-amber-400" data-i18n="footer.quicklinks">Quick Links</div>
         <div class="flex flex-col gap-2 text-sm text-blue-200">
-          <a href="index.html" class="hover:text-white transition">Home</a>
-          <a href="products.html" class="hover:text-white transition">Products</a>
-          <a href="contact.html" class="hover:text-white transition">Contact</a>
+          <a href="index.html" class="hover:text-white transition" data-i18n="nav.home">Home</a>
+          <a href="products.html" class="hover:text-white transition" data-i18n="nav.products">Products</a>
+          <a href="contact.html" class="hover:text-white transition" data-i18n="nav.contact">Contact</a>
         </div>
       </div>
       <div>
-        <div class="font-semibold mb-3 text-amber-400">Contact</div>
+        <div class="font-semibold mb-3 text-amber-400" data-i18n="footer.contactLabel">Contact</div>
         <div class="flex flex-col gap-2 text-sm text-blue-200">
           <span>📞 085-112-1182</span>
           <span>✉️ thaicharoen1999@gmail.com</span>
@@ -283,11 +287,12 @@
         </div>
       </div>
     </div>
-    <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-white/10 text-center text-blue-300 text-sm">
+    <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-white/10 text-center text-blue-300 text-sm" data-i18n="footer.rights">
       © 2025 Thaicharoen Plastic Co., Ltd. All rights reserved.
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     function toggleMenu() {
       document.getElementById('mobile-menu').classList.toggle('hidden');

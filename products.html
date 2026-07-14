@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products – Thaicharoen Plastic</title>
-  <meta name="description" content="Browse Thaicharoen Plastic's product catalog: PP, PE (LLDPE), and HDPE commodity plastics with factory-direct pricing." />
+  <title data-i18n="products.meta.title">Products – Thaicharoen Plastic</title>
+  <meta name="description" data-i18n-content="products.meta.desc" content="Browse Thaicharoen Plastic's product catalog: PP, PE (LLDPE), and HDPE commodity plastics with factory-direct pricing." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -40,13 +40,16 @@
         <span class="font-bold text-lg text-brand-900">Thaicharoen Plastic</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="font-medium text-gray-600 hover:text-brand-700 transition">Home</a>
-        <a href="products.html" class="font-medium text-brand-700 border-b-2 border-brand-700 pb-0.5">Products</a>
-        <a href="contact.html" class="font-medium text-gray-600 hover:text-brand-700 transition">Contact</a>
+        <a href="index.html" class="font-medium text-gray-600 hover:text-brand-700 transition" data-i18n="nav.home">Home</a>
+        <a href="products.html" class="font-medium text-brand-700 border-b-2 border-brand-700 pb-0.5" data-i18n="nav.products">Products</a>
+        <a href="contact.html" class="font-medium text-gray-600 hover:text-brand-700 transition" data-i18n="nav.contact">Contact</a>
       </div>
-      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-900 transition">
-        Get a Quote
-      </a>
+      <div class="hidden md:flex items-center gap-3">
+        <button onclick="toggleLanguage()" class="lang-toggle-btn text-sm font-semibold text-brand-700 border border-brand-200 rounded-lg px-3 py-2 hover:bg-brand-50 transition">ไทย</button>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-900 transition" data-i18n="nav.quote">
+          Get a Quote
+        </a>
+      </div>
       <button onclick="toggleMenu()" class="md:hidden p-2 rounded text-gray-600 hover:bg-gray-100">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -54,37 +57,42 @@
       </button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white px-6 py-4 flex flex-col gap-3">
-      <a href="index.html" class="font-medium text-gray-600">Home</a>
-      <a href="products.html" class="font-medium text-brand-700">Products</a>
-      <a href="contact.html" class="font-medium text-gray-600">Contact</a>
-      <a href="contact.html" class="bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-semibold text-center mt-1">Get a Quote</a>
+      <a href="index.html" class="font-medium text-gray-600" data-i18n="nav.home">Home</a>
+      <a href="products.html" class="font-medium text-brand-700" data-i18n="nav.products">Products</a>
+      <a href="contact.html" class="font-medium text-gray-600" data-i18n="nav.contact">Contact</a>
+      <button onclick="toggleLanguage()" class="lang-toggle-btn text-left font-medium text-brand-700 border border-brand-200 rounded-lg px-3 py-2 mt-1">ไทย</button>
+      <a href="contact.html" class="bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-semibold text-center mt-1" data-i18n="nav.quote">Get a Quote</a>
     </div>
   </nav>
 
   <!-- Page Header -->
   <section class="hero-gradient pt-16">
     <div class="max-w-6xl mx-auto px-6 py-20 text-center text-white">
-      <span class="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4">Product Catalog</span>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Our Plastic Products</h1>
-      <p class="text-blue-100 text-lg max-w-2xl mx-auto">
+      <span class="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4" data-i18n="products.header.badge">Product Catalog</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4" data-i18n="products.header.title">Our Plastic Products</h1>
+      <p class="text-blue-100 text-lg max-w-2xl mx-auto" data-i18n="products.header.desc">
         High-quality commodity plastics for every industrial application. Competitive factory-direct pricing with bulk order discounts available.
       </p>
       <!-- Jump links -->
       <div class="flex flex-wrap gap-3 justify-center mt-8">
-        <a href="#pp" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition">PP – Polypropylene</a>
-        <a href="#pe" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition">PE – Polyethylene</a>
-        <a href="#hdpe" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition">HDPE</a>
+        <a href="#pp" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition" data-i18n="products.jump.pp">PP – Polypropylene</a>
+        <a href="#pe" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition" data-i18n="products.jump.pe">PE – Polyethylene</a>
+        <a href="#hdpe" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition" data-i18n="products.jump.hdpe">HDPE</a>
       </div>
     </div>
   </section>
 
   <!-- Price note banner -->
   <div class="bg-amber-50 border-b border-amber-200">
-    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-3 text-sm text-amber-800">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex flex-wrap items-center gap-x-1 gap-y-1 text-sm text-amber-800">
       <svg class="w-4 h-4 flex-shrink-0 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
-      <span><strong>Pricing:</strong> Prices change with raw material markets and order details, so we quote by phone or email rather than list fixed prices. <a href="tel:+66851121182" class="underline font-semibold">Call us</a> or <a href="contact.html" class="underline font-semibold">send an inquiry</a> for a firm quote.</span>
+      <span data-i18n="products.priceBanner.text">Prices change with raw material markets and order details, so we quote by phone or email rather than list fixed prices.</span>
+      <a href="tel:+66851121182" class="underline font-semibold" data-i18n="products.priceBanner.call">Call us</a>
+      <span data-i18n="products.priceBanner.or">or</span>
+      <a href="contact.html" class="underline font-semibold" data-i18n="products.priceBanner.inquiry">send an inquiry</a>
+      <span data-i18n="products.priceBanner.suffix">for a firm quote.</span>
     </div>
   </div>
 
@@ -96,60 +104,63 @@
           <div class="inline-flex items-center gap-2 bg-brand-100 rounded-full px-4 py-1.5 mb-5">
             <span class="text-4xl font-black text-brand-700">PP</span>
           </div>
-          <h2 class="text-3xl font-extrabold text-brand-900 mb-2">Polypropylene</h2>
-          <p class="text-gray-500 font-medium mb-6">Versatile, Lightweight & Chemical-Resistant</p>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <h2 class="text-3xl font-extrabold text-brand-900 mb-2" data-i18n="products.pp.title">Polypropylene</h2>
+          <p class="text-gray-500 font-medium mb-6" data-i18n="products.pp.subtitle">Versatile, Lightweight & Chemical-Resistant</p>
+          <p class="text-gray-600 leading-relaxed mb-6" data-i18n="products.pp.p1">
             Polypropylene is one of the most widely used thermoplastics in the world. Its unique combination of stiffness, heat resistance, and chemical inertness makes it ideal for a huge range of applications — from food containers and automotive components to textiles and medical devices.
           </p>
-          <p class="text-gray-600 leading-relaxed mb-8">
+          <p class="text-gray-600 leading-relaxed mb-8" data-i18n="products.pp.p2">
             We offer PP in homopolymer and copolymer grades, in pellet form, suitable for injection moulding, extrusion, blow moulding, and thermoforming processes.
           </p>
 
           <div class="space-y-3 mb-8">
-            <h3 class="font-bold text-brand-900">Key Properties</h3>
+            <h3 class="font-bold text-brand-900" data-i18n="products.pp.propertiesLabel">Key Properties</h3>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span>High stiffness & rigidity</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span>Excellent chemical resistance</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span>Fatigue resistance (living hinges)</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span>Low density (0.90–0.91 g/cm³)</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span>Melt point: 130–171°C</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span>Food-safe grades available</div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span><span data-i18n="products.pp.prop1">High stiffness & rigidity</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span><span data-i18n="products.pp.prop2">Excellent chemical resistance</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span><span data-i18n="products.pp.prop3">Fatigue resistance (living hinges)</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span><span data-i18n="products.pp.prop4">Low density (0.90–0.91 g/cm³)</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span><span data-i18n="products.pp.prop5">Melt point: 130–171°C</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-brand-700 rounded-full flex-shrink-0"></span><span data-i18n="products.pp.prop6">Food-safe grades available</span></div>
             </div>
           </div>
 
           <div class="mb-8">
-            <h3 class="font-bold text-brand-900 mb-3">Common Applications</h3>
+            <h3 class="font-bold text-brand-900 mb-3" data-i18n="products.pp.appLabel">Common Applications</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm">Food Packaging</span>
-              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm">Automotive Parts</span>
-              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm">Pipes & Fittings</span>
-              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm">Consumer Products</span>
-              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm">Woven Bags</span>
-              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm">Medical Devices</span>
+              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pp.app1">Food Packaging</span>
+              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pp.app2">Automotive Parts</span>
+              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pp.app3">Pipes & Fittings</span>
+              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pp.app4">Consumer Products</span>
+              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pp.app5">Woven Bags</span>
+              <span class="bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pp.app6">Medical Devices</span>
             </div>
           </div>
         </div>
 
         <div class="section-fade">
           <div class="bg-gradient-to-br from-blue-50 to-brand-100 rounded-3xl p-8 border border-brand-200 sticky top-24">
-            <h3 class="font-bold text-brand-900 text-lg mb-6">Available Grades</h3>
+            <h3 class="font-bold text-brand-900 text-lg mb-6" data-i18n="products.gradesLabel">Available Grades</h3>
             <div class="space-y-4">
               <div class="bg-white rounded-xl p-5 border border-brand-100 shadow-sm">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-semibold text-gray-800">PP Homopolymer</span>
-                  <span class="bg-brand-700 text-white text-xs font-bold px-2 py-0.5 rounded">Most Popular</span>
+                  <span class="font-semibold text-gray-800" data-i18n="products.pp.grade1.name">PP Homopolymer</span>
+                  <span class="bg-brand-700 text-white text-xs font-bold px-2 py-0.5 rounded" data-i18n="products.pp.grade1.badge">Most Popular</span>
                 </div>
-                <div class="text-xs text-gray-500 mt-1">Suitable for general-purpose injection moulding</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="products.pp.grade1.desc">Suitable for general-purpose injection moulding</div>
               </div>
               <div class="bg-white rounded-xl p-5 border border-brand-100 shadow-sm">
-                <div class="font-semibold text-gray-800 mb-1">PP Copolymer</div>
-                <div class="text-xs text-gray-500 mt-1">Improved impact strength and flexibility</div>
+                <div class="font-semibold text-gray-800 mb-1" data-i18n="products.pp.grade2.name">PP Copolymer</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="products.pp.grade2.desc">Improved impact strength and flexibility</div>
               </div>
             </div>
             <div class="mt-6 p-4 bg-amber-50 rounded-xl border border-amber-200 text-sm text-amber-800">
-              <strong>Pricing varies with raw material markets.</strong> Call <a href="tel:+66851121182" class="underline font-semibold">085-112-1182</a> for current rates and volume discounts.
+              <strong data-i18n="products.pp.pricenote.strong">Pricing varies with raw material markets.</strong>
+              <span data-i18n="products.pp.pricenote.pre">Call</span>
+              <a href="tel:+66851121182" class="underline font-semibold">085-112-1182</a>
+              <span data-i18n="products.pp.pricenote.post">for current rates and volume discounts.</span>
             </div>
-            <a href="contact.html" class="mt-6 block w-full text-center bg-brand-700 hover:bg-brand-900 text-white font-semibold py-3 rounded-xl transition">
+            <a href="contact.html" class="mt-6 block w-full text-center bg-brand-700 hover:bg-brand-900 text-white font-semibold py-3 rounded-xl transition" data-i18n="products.pp.order">
               Order PP Now
             </a>
           </div>
@@ -167,20 +178,23 @@
       <div class="grid md:grid-cols-2 gap-16 items-start">
         <div class="section-fade order-2 md:order-1">
           <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-3xl p-8 border border-amber-200 sticky top-24">
-            <h3 class="font-bold text-brand-900 text-lg mb-6">Available Grades</h3>
+            <h3 class="font-bold text-brand-900 text-lg mb-6" data-i18n="products.gradesLabel">Available Grades</h3>
             <div class="space-y-4">
               <div class="bg-white rounded-xl p-5 border border-amber-100 shadow-sm">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-semibold text-gray-800">LLDPE (Linear Low Density)</span>
-                  <span class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded">Best Value</span>
+                  <span class="font-semibold text-gray-800" data-i18n="products.pe.grade1.name">LLDPE (Linear Low Density)</span>
+                  <span class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded" data-i18n="products.pe.grade1.badge">Best Value</span>
                 </div>
-                <div class="text-xs text-gray-500 mt-1">Excellent stretch & puncture resistance for films</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="products.pe.grade1.desc">Excellent stretch & puncture resistance for films</div>
               </div>
             </div>
             <div class="mt-6 p-4 bg-brand-50 rounded-xl border border-brand-100 text-sm text-brand-800">
-              <strong>Pricing varies with raw material markets.</strong> Call <a href="tel:+66851121182" class="underline font-semibold">085-112-1182</a> with your MFI and density requirements for a quote.
+              <strong data-i18n="products.pe.pricenote.strong">Pricing varies with raw material markets.</strong>
+              <span data-i18n="products.pe.pricenote.pre">Call</span>
+              <a href="tel:+66851121182" class="underline font-semibold">085-112-1182</a>
+              <span data-i18n="products.pe.pricenote.post">with your MFI and density requirements for a quote.</span>
             </div>
-            <a href="contact.html" class="mt-6 block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl transition">
+            <a href="contact.html" class="mt-6 block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl transition" data-i18n="products.pe.order">
               Order PE Now
             </a>
           </div>
@@ -190,35 +204,37 @@
           <div class="inline-flex items-center gap-2 bg-amber-100 rounded-full px-4 py-1.5 mb-5">
             <span class="text-4xl font-black text-amber-600">PE</span>
           </div>
-          <h2 class="text-3xl font-extrabold text-brand-900 mb-2">Polyethylene (LLDPE)</h2>
-          <p class="text-gray-500 font-medium mb-6">Flexible, Tough & Puncture-Resistant</p>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <h2 class="text-3xl font-extrabold text-brand-900 mb-2" data-i18n="products.pe.title">Polyethylene (LLDPE)</h2>
+          <p class="text-gray-500 font-medium mb-6" data-i18n="products.pe.subtitle">Flexible, Tough & Puncture-Resistant</p>
+          <p class="text-gray-600 leading-relaxed mb-6" data-i18n="products.pe.p1">
             Linear Low-Density Polyethylene (LLDPE) is prized for its outstanding toughness, moisture resistance, and ease of processing. It provides excellent flexibility and puncture resistance, making it a top choice for stretch films and flexible packaging.
           </p>
           <p class="text-gray-600 leading-relaxed mb-8">
-            Looking for something more rigid? See our <a href="#hdpe" class="text-amber-700 font-semibold hover:underline">HDPE</a> range below for bottles, pipes, and structural applications.
+            <span data-i18n="products.pe.p2pre">Looking for something more rigid? See our</span>
+            <a href="#hdpe" class="text-amber-700 font-semibold hover:underline" data-i18n="products.pe.p2link">HDPE</a>
+            <span data-i18n="products.pe.p2post">range below for bottles, pipes, and structural applications.</span>
           </p>
 
           <div class="space-y-3 mb-8">
-            <h3 class="font-bold text-brand-900">Key Properties</h3>
+            <h3 class="font-bold text-brand-900" data-i18n="products.pp.propertiesLabel">Key Properties</h3>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span>High puncture resistance</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span>Excellent moisture barrier</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span>Good stretch & cling</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span>Easy to weld and fabricate</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span>FDA-compliant grades</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span>Recyclable (Code 4)</div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span><span data-i18n="products.pe.prop1">High puncture resistance</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span><span data-i18n="products.pe.prop2">Excellent moisture barrier</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span><span data-i18n="products.pe.prop3">Good stretch & cling</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span><span data-i18n="products.pe.prop4">Easy to weld and fabricate</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span><span data-i18n="products.pe.prop5">FDA-compliant grades</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-amber-500 rounded-full flex-shrink-0"></span><span data-i18n="products.pe.prop6">Recyclable (Code 4)</span></div>
             </div>
           </div>
 
           <div>
-            <h3 class="font-bold text-brand-900 mb-3">Common Applications</h3>
+            <h3 class="font-bold text-brand-900 mb-3" data-i18n="products.pp.appLabel">Common Applications</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm">Agricultural Film</span>
-              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm">Stretch Film</span>
-              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm">Plastic Bags</span>
-              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm">Flexible Packaging</span>
-              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm">Liners</span>
+              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pe.app1">Agricultural Film</span>
+              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pe.app2">Stretch Film</span>
+              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pe.app3">Plastic Bags</span>
+              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pe.app4">Flexible Packaging</span>
+              <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-sm" data-i18n="products.pe.app5">Liners</span>
             </div>
           </div>
         </div>
@@ -237,55 +253,58 @@
           <div class="inline-flex items-center gap-2 bg-green-100 rounded-full px-4 py-1.5 mb-5">
             <span class="text-4xl font-black text-green-600">HDPE</span>
           </div>
-          <h2 class="text-3xl font-extrabold text-brand-900 mb-2">High-Density Polyethylene</h2>
-          <p class="text-gray-500 font-medium mb-6">Rigid, Strong & Impact-Resistant</p>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <h2 class="text-3xl font-extrabold text-brand-900 mb-2" data-i18n="products.hdpe.title">High-Density Polyethylene</h2>
+          <p class="text-gray-500 font-medium mb-6" data-i18n="products.hdpe.subtitle">Rigid, Strong & Impact-Resistant</p>
+          <p class="text-gray-600 leading-relaxed mb-6" data-i18n="products.hdpe.p1">
             High-Density Polyethylene (HDPE) stands out for its strength-to-density ratio, rigidity, and resistance to impact and chemicals. Its tightly packed molecular structure makes it the material of choice for bottles, pipes, and containers that need to hold their shape under stress.
           </p>
-          <p class="text-gray-600 leading-relaxed mb-8">
+          <p class="text-gray-600 leading-relaxed mb-8" data-i18n="products.hdpe.p2">
             HDPE is widely used in structural and packaging applications where strength and durability matter — from water and drainage pipes to industrial drums and heavy-duty containers.
           </p>
 
           <div class="space-y-3 mb-8">
-            <h3 class="font-bold text-brand-900">Key Properties</h3>
+            <h3 class="font-bold text-brand-900" data-i18n="products.pp.propertiesLabel">Key Properties</h3>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span>High strength & rigidity</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span>Excellent chemical resistance</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span>Good impact resistance</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span>Moisture-proof barrier</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span>Density: 0.93–0.97 g/cm³</div>
-              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span>Recyclable (Code 2)</div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span><span data-i18n="products.hdpe.prop1">High strength & rigidity</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span><span data-i18n="products.hdpe.prop2">Excellent chemical resistance</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span><span data-i18n="products.hdpe.prop3">Good impact resistance</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span><span data-i18n="products.hdpe.prop4">Moisture-proof barrier</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span><span data-i18n="products.hdpe.prop5">Density: 0.93–0.97 g/cm³</span></div>
+              <div class="flex items-center gap-2 text-sm text-gray-700"><span class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span><span data-i18n="products.hdpe.prop6">Recyclable (Code 2)</span></div>
             </div>
           </div>
 
           <div>
-            <h3 class="font-bold text-brand-900 mb-3">Common Applications</h3>
+            <h3 class="font-bold text-brand-900 mb-3" data-i18n="products.pp.appLabel">Common Applications</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm">Water & Drainage Pipes</span>
-              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm">Bottles & Tanks</span>
-              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm">Containers & Drums</span>
-              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm">Crates</span>
-              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm">Caps & Closures</span>
+              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm" data-i18n="products.hdpe.app1">Water & Drainage Pipes</span>
+              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm" data-i18n="products.hdpe.app2">Bottles & Tanks</span>
+              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm" data-i18n="products.hdpe.app3">Containers & Drums</span>
+              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm" data-i18n="products.hdpe.app4">Crates</span>
+              <span class="bg-green-50 text-green-800 border border-green-200 px-3 py-1 rounded-full text-sm" data-i18n="products.hdpe.app5">Caps & Closures</span>
             </div>
           </div>
         </div>
 
         <div class="section-fade">
           <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 border border-green-200 sticky top-24">
-            <h3 class="font-bold text-brand-900 text-lg mb-6">Available Grades</h3>
+            <h3 class="font-bold text-brand-900 text-lg mb-6" data-i18n="products.gradesLabel">Available Grades</h3>
             <div class="space-y-4">
               <div class="bg-white rounded-xl p-5 border border-green-100 shadow-sm">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-semibold text-gray-800">HDPE (High Density)</span>
-                  <span class="bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded">Best Value</span>
+                  <span class="font-semibold text-gray-800" data-i18n="products.hdpe.grade1.name">HDPE (High Density)</span>
+                  <span class="bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded" data-i18n="products.hdpe.grade1.badge">Best Value</span>
                 </div>
-                <div class="text-xs text-gray-500 mt-1">Rigid, strong — bottles, pipes, drums</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="products.hdpe.grade1.desc">Rigid, strong — bottles, pipes, drums</div>
               </div>
             </div>
             <div class="mt-6 p-4 bg-amber-50 rounded-xl border border-amber-200 text-sm text-amber-800">
-              <strong>Prices vary with raw material markets.</strong> Call <a href="tel:+66851121182" class="underline font-semibold">085-112-1182</a> to lock in current rates or discuss a supply agreement.
+              <strong data-i18n="products.hdpe.pricenote.strong">Prices vary with raw material markets.</strong>
+              <span data-i18n="products.hdpe.pricenote.pre">Call</span>
+              <a href="tel:+66851121182" class="underline font-semibold">085-112-1182</a>
+              <span data-i18n="products.hdpe.pricenote.post">to lock in current rates or discuss a supply agreement.</span>
             </div>
-            <a href="contact.html" class="mt-6 block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition">
+            <a href="contact.html" class="mt-6 block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition" data-i18n="products.hdpe.order">
               Order HDPE Now
             </a>
           </div>
@@ -298,14 +317,14 @@
   <section class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-12 section-fade">
-        <span class="text-brand-700 font-semibold text-sm uppercase tracking-widest">Compare</span>
-        <h2 class="text-3xl font-extrabold text-brand-900 mt-3">Quick Comparison</h2>
+        <span class="text-brand-700 font-semibold text-sm uppercase tracking-widest" data-i18n="products.compare.label">Compare</span>
+        <h2 class="text-3xl font-extrabold text-brand-900 mt-3" data-i18n="products.compare.title">Quick Comparison</h2>
       </div>
       <div class="section-fade overflow-x-auto">
         <table class="w-full bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
           <thead>
             <tr class="bg-brand-900 text-white">
-              <th class="text-left px-6 py-4 font-semibold">Property</th>
+              <th class="text-left px-6 py-4 font-semibold" data-i18n="products.compare.property">Property</th>
               <th class="text-center px-6 py-4 font-semibold text-blue-200">PP</th>
               <th class="text-center px-6 py-4 font-semibold text-amber-300">PE (LLDPE)</th>
               <th class="text-center px-6 py-4 font-semibold text-green-300">HDPE</th>
@@ -313,39 +332,39 @@
           </thead>
           <tbody class="divide-y divide-gray-100">
             <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 font-medium text-gray-700">Density (g/cm³)</td>
+              <td class="px-6 py-4 font-medium text-gray-700" data-i18n="products.compare.density">Density (g/cm³)</td>
               <td class="px-6 py-4 text-center text-gray-600">0.90–0.91</td>
               <td class="px-6 py-4 text-center text-gray-600">0.91–0.93</td>
               <td class="px-6 py-4 text-center text-gray-600">0.93–0.97</td>
             </tr>
             <tr class="hover:bg-gray-50 bg-gray-50/50">
-              <td class="px-6 py-4 font-medium text-gray-700">Flexibility</td>
-              <td class="px-6 py-4 text-center text-gray-600">Stiff</td>
-              <td class="px-6 py-4 text-center text-gray-600">Very Flexible</td>
-              <td class="px-6 py-4 text-center text-gray-600">Rigid</td>
+              <td class="px-6 py-4 font-medium text-gray-700" data-i18n="products.compare.flexibility">Flexibility</td>
+              <td class="px-6 py-4 text-center text-gray-600" data-i18n="products.compare.stiff">Stiff</td>
+              <td class="px-6 py-4 text-center text-gray-600" data-i18n="products.compare.veryflexible">Very Flexible</td>
+              <td class="px-6 py-4 text-center text-gray-600" data-i18n="products.compare.rigid">Rigid</td>
             </tr>
             <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 font-medium text-gray-700">Clarity</td>
-              <td class="px-6 py-4 text-center text-gray-600">Translucent</td>
-              <td class="px-6 py-4 text-center text-gray-600">Clear</td>
-              <td class="px-6 py-4 text-center text-gray-600">Opaque</td>
+              <td class="px-6 py-4 font-medium text-gray-700" data-i18n="products.compare.clarity">Clarity</td>
+              <td class="px-6 py-4 text-center text-gray-600" data-i18n="products.compare.translucent">Translucent</td>
+              <td class="px-6 py-4 text-center text-gray-600" data-i18n="products.compare.clear">Clear</td>
+              <td class="px-6 py-4 text-center text-gray-600" data-i18n="products.compare.opaque">Opaque</td>
             </tr>
             <tr class="hover:bg-gray-50 bg-gray-50/50">
-              <td class="px-6 py-4 font-medium text-gray-700">Heat Resistance</td>
+              <td class="px-6 py-4 font-medium text-gray-700" data-i18n="products.compare.heat">Heat Resistance</td>
               <td class="px-6 py-4 text-center">
-                <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-semibold">High</span>
+                <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-semibold" data-i18n="products.compare.high">High</span>
               </td>
               <td class="px-6 py-4 text-center">
-                <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs font-semibold">Low</span>
+                <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs font-semibold" data-i18n="products.compare.low">Low</span>
               </td>
               <td class="px-6 py-4 text-center">
-                <span class="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs font-semibold">Medium</span>
+                <span class="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs font-semibold" data-i18n="products.compare.medium">Medium</span>
               </td>
             </tr>
             <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 font-medium text-gray-700">Price</td>
+              <td class="px-6 py-4 font-medium text-gray-700" data-i18n="products.compare.price">Price</td>
               <td colspan="3" class="px-6 py-4 text-center">
-                <a href="tel:+66851121182" class="font-bold text-brand-700 hover:underline">Call 085-112-1182 for current rates</a>
+                <a href="tel:+66851121182" class="font-bold text-brand-700 hover:underline" data-i18n="products.compare.priceCall">Call 085-112-1182 for current rates</a>
               </td>
             </tr>
           </tbody>
@@ -357,9 +376,9 @@
   <!-- CTA -->
   <section class="py-20 hero-gradient">
     <div class="max-w-4xl mx-auto px-6 text-center text-white section-fade">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Not Sure Which Material is Right?</h2>
-      <p class="text-blue-100 text-lg mb-8">Our technical team can help you select the correct grade and formulation for your specific application.</p>
-      <a href="contact.html" class="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-white font-bold px-8 py-4 rounded-xl transition shadow-lg text-lg">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4" data-i18n="products.cta.title">Not Sure Which Material is Right?</h2>
+      <p class="text-blue-100 text-lg mb-8" data-i18n="products.cta.desc">Our technical team can help you select the correct grade and formulation for your specific application.</p>
+      <a href="contact.html" class="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-white font-bold px-8 py-4 rounded-xl transition shadow-lg text-lg" data-i18n="products.cta.button">
         Talk to Our Team
       </a>
     </div>
@@ -375,18 +394,18 @@
           </div>
           <span class="font-bold text-lg">Thaicharoen Plastic</span>
         </div>
-        <p class="text-blue-200 text-sm leading-relaxed">Quality plastic supplier serving industries across Thailand.</p>
+        <p class="text-blue-200 text-sm leading-relaxed" data-i18n="footer.tagline">Quality plastic supplier serving industries across Thailand.</p>
       </div>
       <div>
-        <div class="font-semibold mb-3 text-amber-400">Quick Links</div>
+        <div class="font-semibold mb-3 text-amber-400" data-i18n="footer.quicklinks">Quick Links</div>
         <div class="flex flex-col gap-2 text-sm text-blue-200">
-          <a href="index.html" class="hover:text-white transition">Home</a>
-          <a href="products.html" class="hover:text-white transition">Products</a>
-          <a href="contact.html" class="hover:text-white transition">Contact</a>
+          <a href="index.html" class="hover:text-white transition" data-i18n="nav.home">Home</a>
+          <a href="products.html" class="hover:text-white transition" data-i18n="nav.products">Products</a>
+          <a href="contact.html" class="hover:text-white transition" data-i18n="nav.contact">Contact</a>
         </div>
       </div>
       <div>
-        <div class="font-semibold mb-3 text-amber-400">Contact</div>
+        <div class="font-semibold mb-3 text-amber-400" data-i18n="footer.contactLabel">Contact</div>
         <div class="flex flex-col gap-2 text-sm text-blue-200">
           <span>📞 085-112-1182</span>
           <span>✉️ thaicharoen1999@gmail.com</span>
@@ -394,11 +413,12 @@
         </div>
       </div>
     </div>
-    <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-white/10 text-center text-blue-300 text-sm">
+    <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-white/10 text-center text-blue-300 text-sm" data-i18n="footer.rights">
       © 2025 Thaicharoen Plastic Co., Ltd. All rights reserved.
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     function toggleMenu() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
